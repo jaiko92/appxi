@@ -63,7 +63,7 @@ class SettingsTableSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => 'Pagina',
-                'value'        => 'landingpage-software',
+                'value'        => 'landingpage-appxi',
                 'details'      => '',
                 'type'         => 'text',
                 'order'        => $count++,

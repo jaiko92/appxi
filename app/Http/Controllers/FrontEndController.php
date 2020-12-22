@@ -12,8 +12,9 @@ class FrontEndController extends Controller
     function default()
     {
         $page = setting('site.page');
+        //return $page;
         $collection = Page::where('slug', $page)->first();
-
+        //return $collection;
         if($collection){
             $blocks = Block::where('page_id', $collection->id)->orderBy('position', 'asc')->get();
             return view($collection->direction, [

@@ -74,7 +74,24 @@ class PagesTableSeeder extends Seeder
                 ]
             ])
         ]);
-
+        $count=1;
+        Block::create([
+            'name'        => 'lpa_block1',
+            'title'       => 'banner del sitio',
+            'type'        => 'dinamyc-data',
+            'description' => 'banner del sitio',
+            'page_id'     => $page->id,
+            'position'    => $count++,
+            'details'     => json_encode([
+                    'title' => [
+                        'type' => 'text',
+                        'name' => 'title',
+                        'label' => 'Titulo',
+                        'value' => 'Make purchases with our app',
+                        'width' => 4
+                    ],
+            ])
+        ]);
          //----------------------------------------------------------------------
          $page = Page::create([
             'name'        =>  'politica privacidad',
